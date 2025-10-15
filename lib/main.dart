@@ -11,6 +11,7 @@
 	  WidgetsFlutterBinding.ensureInitialized();
 	  // initialize the database
 	  await dbHelper.init();
+
 	  runApp(const MyApp());
 	}
 	
@@ -50,21 +51,42 @@
 	            ElevatedButton(
 	              onPressed: _insert,
 	              child: const Text('insert'),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  backgroundColor: Colors.blue.shade900,
+                  foregroundColor: Colors.white,
+                )
+                
 	            ),
 	            const SizedBox(height: 10),
 	            ElevatedButton(
 	              onPressed: _query,
 	              child: const Text('query'),
+                style: ElevatedButton.styleFrom( // to change the background and text color, as well as size of the buttons.
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                   backgroundColor: Colors.blue.shade800,
+                  foregroundColor: Colors.white,
+                )
 	            ),
 	            const SizedBox(height: 10),
 	            ElevatedButton(
 	              onPressed: _update,
 	              child: const Text('update'),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                   backgroundColor: Colors.blue.shade700,
+                  foregroundColor: Colors.white,
+                )
 	            ),
 	            const SizedBox(height: 10),
 	            ElevatedButton(
 	              onPressed: _delete,
 	              child: const Text('delete'),
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                   backgroundColor: Colors.blue.shade600,
+                  foregroundColor: Colors.white,
+                )
 	            ),
 	          ],
 	        ),
